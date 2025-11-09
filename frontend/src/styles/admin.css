@@ -1,0 +1,244 @@
+/* ====== ADMIN DASHBOARD STYLES ====== */
+
+/* Common layout */
+body {
+  background-color: #f9fafb;
+  font-family: "Poppins", sans-serif;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Card styling */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Section headers */
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* Filter buttons */
+button.primary,
+button.secondary {
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  font-size: 0.95rem;
+}
+
+button.primary {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+}
+
+button.primary:hover {
+  background-color: #1e40af;
+}
+
+button.secondary {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+}
+
+button.secondary:hover {
+  background-color: #dbeafe;
+}
+
+/* Complaint list cards */
+.complaint-card,
+.vehicle-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: 0.25s ease;
+}
+
+.complaint-card:hover,
+.vehicle-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.15);
+}
+
+/* Complaint details */
+.complaint-card b {
+  font-size: 1rem;
+  color: #111827;
+}
+
+.complaint-card .text-sm {
+  color: #4b5563;
+}
+
+.complaint-card .text-xs {
+  color: #9ca3af;
+}
+
+/* Vehicle approval cards */
+.vehicle-card .text-sm {
+  color: #475569;
+}
+
+.vehicle-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.vehicle-card a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons inside each card */
+.vehicle-card button,
+.complaint-card button {
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 1rem;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Empty state */
+.empty-state {
+  color: #9ca3af;
+  text-align: center;
+  padding: 2rem;
+  font-style: italic;
+}
+/* ====== ADMIN DASHBOARD LAYOUT ====== */
+
+/* Container: sidebar + main content */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  background: #1e3a8a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.admin-sidebar.collapsed {
+  width: 70px;
+}
+
+.admin-sidebar h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.admin-nav button {
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  text-align: left;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.admin-nav button:hover,
+.admin-nav button.active {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+/* Top bar */
+.admin-topbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-topbar h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* Main content area */
+.admin-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: fixed;
+    width: 200px;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    z-index: 20;
+  }
+
+  .admin-sidebar.open {
+    left: 0;
+  }
+
+  .admin-content {
+    padding: 1rem;
+  }
+
+  .sidebar-toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #1e40af;
+  }
+}

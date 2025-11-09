@@ -1,0 +1,127 @@
+/* ====== AUTH FORM GLOBAL STYLES ====== */
+
+/* Common page background */
+body {
+  background: linear-gradient(135deg, #f3f4f6, #dbeafe);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centered card for Login/Signup/Forgot/Reset */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  margin: 60px auto;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #1e3a8a;
+}
+
+/* Form Inputs */
+.card input,
+.card select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.card input:focus,
+.card select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+button,
+.card button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+button:hover,
+.card button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Links */
+.card a,
+.card a:visited {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Small text (labels, hints, etc.) */
+.card label {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Toast message alignment (if you use one) */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadein 0.3s ease;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.app-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+.content-wrapper {
+  padding: 20px;
+}
+
+.loading-screen {
+  padding: 30px;
+  text-align: center;
+  font-weight: 500;
+  color: #2563eb;
+  font-size: 1.1rem;
+}
